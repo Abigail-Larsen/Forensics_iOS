@@ -21,13 +21,7 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         loadMessages()
     }
-//    
-//    @IBAction func AddCase(_ sender: UIButton) {
-////        let vc = AddCaseController()
-//        
-//        self.performSegue(withIdentifier: "ChatViewController", sender: self)
-//    }
-    
+
     func loadMessages () {
         db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener{(QuerySnapshot, error) in
             self.messages = []
