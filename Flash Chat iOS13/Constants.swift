@@ -13,8 +13,9 @@ struct K {
     struct FStore {
         static let collectionName = "cases"
         static let senderField = "sender"
-        static let bodyField = "body"
+        static let caseName = "caseName"
+        static let caseNumber = "caseNumber"
         static let dateField = "date"
-        static let id = "id"
     }
 }
+//bodyField

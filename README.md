@@ -41,6 +41,7 @@ struct K {
 
 # Models
 
+
 ```
     struct CaseBrain {
         func getCase() -> { }
@@ -49,7 +50,7 @@ struct K {
 
 
 ```
-struct CaseBrain {
+struct ARBrain {
 }
 
 ```

@@ -10,6 +10,7 @@ import Foundation
 
 struct Cases {
     let sender: String
-    let body: String
-    let id: String
+    let caseName: String
+    let caseNumber: String
+//    let caseDate: String
 }

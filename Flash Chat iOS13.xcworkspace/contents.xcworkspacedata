@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "art.scnassets">
+      <FileRef
+         location = "group:/Users/abigailthelin/Desktop/DGM_Forensics/New_RedBase_Color.png">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/abigailthelin/Desktop/DGM_Forensics/diceCollada.scn">
+      </FileRef>
+      <FileRef
+         location = "group:grid copy.png">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Flash Chat iOS13.xcodeproj">
    </FileRef>

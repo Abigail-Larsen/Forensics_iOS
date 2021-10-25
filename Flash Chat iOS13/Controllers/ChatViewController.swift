@@ -9,7 +9,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var AddCaseBtn: UIImageView!
     let db = Firestore.firestore()
     
-    var messages: [Cases] = []
+    var casesList: [Cases] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +19,12 @@ class ChatViewController: UIViewController {
         title = "My Cases"
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]; navigationController?.navigationBar.titleTextAttributes = textAttributes
         navigationItem.hidesBackButton = true
-        loadMessages()
+        loadCases()
     }
 
-    func loadMessages () {
+    func loadCases () {
         db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener{(QuerySnapshot, error) in
-            self.messages = []
+            self.casesList = []
             if let e = error {
                 print("Error retrieving data from firestore", e)
             } else {
@@ -32,9 +32,11 @@ class ChatViewController: UIViewController {
                     for doc in snapshotDocuments {
                         let data = doc.data()
                         print(data)
-                        if let sender = data[K.FStore.senderField] as? String,  let message = data[K.FStore.bodyField] as? String, let id = data[K.FStore.id] as? String{
-                            let newMessage = Cases(sender: sender, body: message, id: id)
-                            self.messages.append(newMessage)
+                        if let sender = data[K.FStore.senderField] as? String, let caseName = data[K.FStore.caseName] as? String, let caseNumber = data[K.FStore.caseNumber] as? String{
+                            
+                            print(data)
+                            let newCase = Cases(sender: sender, caseName: caseName, caseNumber: caseNumber)
+                            self.casesList.append(newCase)
                             
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
@@ -55,36 +57,19 @@ class ChatViewController: UIViewController {
             print("Error signing out", signOutError)
         }
     }
-    
-    @IBAction func sendPressed(_ sender: UIButton) {
-        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
-            db.collection(K.FStore.collectionName).addDocument(data: [
-                K.FStore.bodyField: messageBody,
-                K.FStore.senderField: messageSender,
-                K.FStore.dateField: Date().timeIntervalSince1970,
-                K.FStore.id: "123456789"
-            ]) { (error) in
-                if let e = error {
-                    print("ERROR", e)
-                } else {
-                    print("Succesfully saved data")
-                    self.messageTextfield.text = ""
-                }
-
-            }
-        }
-    }
 }
 
 
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
+        return casesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        cell.projectTitle?.text = messages[indexPath.row].body
+        cell.projectTitle?.text = casesList[indexPath.row].caseName
+        cell.caseNumber?.text = casesList[indexPath.row].caseNumber
+        cell.caseDate?.text = ""
         return cell
     }
 }
@@ -93,12 +78,13 @@ extension ChatViewController: UITableViewDataSource {
 
 extension ChatViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("row: \( casesList[indexPath.row])")
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "CaseDetailsController") as! CaseDetailsController
         
-        let vc = CaseDetailsController()
-                vc.caseNumber = messages[indexPath.row].id
-                vc.caseName = messages[indexPath.row].body
-                print("row: \( messages[indexPath.row])")
-                navigationController?.pushViewController(vc, animated: false)
+        secondViewController.caseNumber = casesList[indexPath.row].caseNumber
+        secondViewController.caseName = casesList[indexPath.row].caseName
+        
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 
 }

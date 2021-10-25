@@ -1,18 +1,17 @@
 import Foundation
 import UIKit
+import Firebase
 
 class CaseDetailsController: UIViewController {
-    @IBOutlet weak var caseTitle: UILabel!
     
+    @IBOutlet weak var caseTitleUI: UILabel!
     var caseNumber = ""
-    var caseName: String = ""
+    var caseName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Case #" + caseNumber
-        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]; navigationController?.navigationBar.titleTextAttributes = textAttributes
-
-//        caseTitle?.text = caseName
-        print(caseName)
+        caseTitleUI.text = caseName
+        print("shit", caseNumber, caseName)
     }
 }
