@@ -8,6 +8,9 @@
          location = "group:/Users/abigailthelin/Desktop/DGM_Forensics/New_RedBase_Color.png">
       </FileRef>
       <FileRef
+         location = "group:mesh.obj">
+      </FileRef>
+      <FileRef
          location = "group:/Users/abigailthelin/Desktop/DGM_Forensics/diceCollada.scn">
       </FileRef>
       <FileRef

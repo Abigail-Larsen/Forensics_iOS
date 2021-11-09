@@ -17,5 +17,12 @@ struct K {
         static let caseNumber = "caseNumber"
         static let dateField = "date"
     }
+    
+    struct FStoreObjs {
+        static let collectionName = "meshObjects"
+        static let senderField = "sender"
+        static let caseNumber = "caseNumber"
+        static let mesh = "mesh"
+    }
 }
 //bodyField

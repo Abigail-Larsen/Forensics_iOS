@@ -24,6 +24,11 @@
 		360CBEAE271B9699006D8677 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360CBEAC271B9699006D8677 /* MessageCell.xib */; };
 		366DA14C27271E2A00349DE7 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA14B27271E2A00349DE7 /* RecordingViewController.swift */; };
 		366DA1512727309F00349DE7 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 366DA1502727309F00349DE7 /* grid.png */; };
+		366DA15A2729FA6C00349DE7 /* CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */; };
+		366DA160272F393700349DE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA15F272F393700349DE7 /* Extensions.swift */; };
+		366DA162272F3A0900349DE7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA161272F3A0900349DE7 /* RoundedButton.swift */; };
+		366DA164272F3F8000349DE7 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA163272F3F8000349DE7 /* SceneViewController.swift */; };
+		367528C6272F5D6A00F3FE66 /* mesh.obj in Resources */ = {isa = PBXBuildFile; fileRef = 367528C5272F5D6A00F3FE66 /* mesh.obj */; };
 		36BB7091271F4BE400620CEB /* CaseDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB7090271F4BE400620CEB /* CaseDetailsController.swift */; };
 		36BB7093271F4C8200620CEB /* CaseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB7092271F4C8200620CEB /* CaseDetails.swift */; };
 		36BB7095271F5BC300620CEB /* AddCaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB7094271F5BC300620CEB /* AddCaseController.swift */; };
@@ -52,6 +57,11 @@
 		366DA1502727309F00349DE7 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
 		366DA157272733A100349DE7 /* New_RedBase_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = New_RedBase_Color.png; path = /Users/abigailthelin/Desktop/DGM_Forensics/New_RedBase_Color.png; sourceTree = "<absolute>"; };
 		366DA1582727351800349DE7 /* diceCollada.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = diceCollada.scn; path = /Users/abigailthelin/Desktop/DGM_Forensics/diceCollada.scn; sourceTree = "<absolute>"; };
+		366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachingOverlay.swift; sourceTree = "<group>"; };
+		366DA15F272F393700349DE7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		366DA161272F3A0900349DE7 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		366DA163272F3F8000349DE7 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
+		367528C5272F5D6A00F3FE66 /* mesh.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mesh.obj; sourceTree = "<group>"; };
 		36BB7090271F4BE400620CEB /* CaseDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailsController.swift; sourceTree = "<group>"; };
 		36BB7092271F4C8200620CEB /* CaseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaseDetails.swift; path = "Flash Chat iOS13/Controllers/CaseDetails.swift"; sourceTree = SOURCE_ROOT; };
 		36BB7094271F5BC300620CEB /* AddCaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseController.swift; sourceTree = "<group>"; };
@@ -112,13 +122,17 @@
 		0B628192235DF02000E35CAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				366DA15F272F393700349DE7 /* Extensions.swift */,
 				0B62818A235DF00000E35CAF /* WelcomeViewController.swift */,
 				0B62818C235DF00B00E35CAF /* RegisterViewController.swift */,
+				366DA161272F3A0900349DE7 /* RoundedButton.swift */,
 				0B62818E235DF01000E35CAF /* LoginViewController.swift */,
 				0B628190235DF01B00E35CAF /* ChatViewController.swift */,
 				36BB7090271F4BE400620CEB /* CaseDetailsController.swift */,
 				36BB7094271F5BC300620CEB /* AddCaseController.swift */,
 				366DA14B27271E2A00349DE7 /* RecordingViewController.swift */,
+				366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */,
+				366DA163272F3F8000349DE7 /* SceneViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +168,7 @@
 		366DA14D27272FD400349DE7 /* art.scnassets */ = {
 			isa = PBXGroup;
 			children = (
+				367528C5272F5D6A00F3FE66 /* mesh.obj */,
 				366DA157272733A100349DE7 /* New_RedBase_Color.png */,
 				366DA1582727351800349DE7 /* diceCollada.scn */,
 				366DA1502727309F00349DE7 /* grid.png */,
@@ -236,6 +251,7 @@
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
 				360CBEA6271B85B2006D8677 /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
+				367528C6272F5D6A00F3FE66 /* mesh.obj in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +308,7 @@
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
 				36BB7091271F4BE400620CEB /* CaseDetailsController.swift in Sources */,
 				36BB7093271F4C8200620CEB /* CaseDetails.swift in Sources */,
+				366DA164272F3F8000349DE7 /* SceneViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
@@ -299,6 +316,9 @@
 				360CBEAA271B92B3006D8677 /* Cases.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				366DA14C27271E2A00349DE7 /* RecordingViewController.swift in Sources */,
+				366DA160272F393700349DE7 /* Extensions.swift in Sources */,
+				366DA162272F3A0900349DE7 /* RoundedButton.swift in Sources */,
+				366DA15A2729FA6C00349DE7 /* CoachingOverlay.swift in Sources */,
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
 				36BB7095271F5BC300620CEB /* AddCaseController.swift in Sources */,
 				360CBEAD271B9699006D8677 /* MessageCell.swift in Sources */,
@@ -377,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -431,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

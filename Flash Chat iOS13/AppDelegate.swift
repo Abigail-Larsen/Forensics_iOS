@@ -10,6 +10,12 @@ import UIKit
 import Firebase
 import IQKeyboardManagerSwift
 
+
+import SceneKit
+import ARKit
+import RealityKit
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -24,7 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
-      return true
+        let supportForSceneReconstruction = ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh)
+        guard supportForSceneReconstruction else {
+            fatalError("Scene Reconstruction isn't supported here")
+        }
+            return true
     }
 
     // MARK: UISceneSession Lifecycle
