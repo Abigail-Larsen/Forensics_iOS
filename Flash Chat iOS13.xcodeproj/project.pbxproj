@@ -19,9 +19,10 @@
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
 		360CBEA6271B85B2006D8677 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 360CBEA5271B85B2006D8677 /* GoogleService-Info.plist */; };
 		360CBEA8271B91ED006D8677 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CBEA7271B91ED006D8677 /* Constants.swift */; };
-		360CBEAA271B92B3006D8677 /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CBEA9271B92B3006D8677 /* Cases.swift */; };
 		360CBEAD271B9699006D8677 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CBEAB271B9699006D8677 /* MessageCell.swift */; };
 		360CBEAE271B9699006D8677 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360CBEAC271B9699006D8677 /* MessageCell.xib */; };
+		361BD265273B331100EA0E69 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361BD264273B331100EA0E69 /* Button.swift */; };
+		361BD269273B33F200EA0E69 /* Button.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361BD268273B33F200EA0E69 /* Button.xib */; };
 		366DA14C27271E2A00349DE7 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA14B27271E2A00349DE7 /* RecordingViewController.swift */; };
 		366DA1512727309F00349DE7 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 366DA1502727309F00349DE7 /* grid.png */; };
 		366DA15A2729FA6C00349DE7 /* CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */; };
@@ -30,8 +31,12 @@
 		366DA164272F3F8000349DE7 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA163272F3F8000349DE7 /* SceneViewController.swift */; };
 		367528C6272F5D6A00F3FE66 /* mesh.obj in Resources */ = {isa = PBXBuildFile; fileRef = 367528C5272F5D6A00F3FE66 /* mesh.obj */; };
 		36BB7091271F4BE400620CEB /* CaseDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB7090271F4BE400620CEB /* CaseDetailsController.swift */; };
-		36BB7093271F4C8200620CEB /* CaseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB7092271F4C8200620CEB /* CaseDetails.swift */; };
 		36BB7095271F5BC300620CEB /* AddCaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB7094271F5BC300620CEB /* AddCaseController.swift */; };
+		36BC26E9278369DE0084001C /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26E8278369DE0084001C /* CaseViewController.swift */; };
+		36BC26F8278393FE0084001C /* CaseListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26F7278393FE0084001C /* CaseListItem.swift */; };
+		36BC26FC2783A6D00084001C /* CaseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26FB2783A6D00084001C /* CaseList.swift */; };
+		36BC27002783B6A50084001C /* CaseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26FF2783B6A50084001C /* CaseDetails.swift */; };
+		36BC27022783B7FF0084001C /* CaseDetailsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC27012783B7FF0084001C /* CaseDetailsUI.swift */; };
 		D3522C4977E11419D2B7881D /* Pods_Flash_Chat_iOS13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCF8F8B35866ACF7D3892D2 /* Pods_Flash_Chat_iOS13.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,9 +55,10 @@
 		0B62819D235F0F4D00E35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		360CBEA5271B85B2006D8677 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		360CBEA7271B91ED006D8677 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		360CBEA9271B92B3006D8677 /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Cases.swift; path = "Flash Chat iOS13/Cases.swift"; sourceTree = SOURCE_ROOT; };
 		360CBEAB271B9699006D8677 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		360CBEAC271B9699006D8677 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		361BD264273B331100EA0E69 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		361BD268273B33F200EA0E69 /* Button.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Button.xib; sourceTree = "<group>"; };
 		366DA14B27271E2A00349DE7 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		366DA1502727309F00349DE7 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
 		366DA157272733A100349DE7 /* New_RedBase_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = New_RedBase_Color.png; path = /Users/abigailthelin/Desktop/DGM_Forensics/New_RedBase_Color.png; sourceTree = "<absolute>"; };
@@ -63,8 +69,12 @@
 		366DA163272F3F8000349DE7 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		367528C5272F5D6A00F3FE66 /* mesh.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mesh.obj; sourceTree = "<group>"; };
 		36BB7090271F4BE400620CEB /* CaseDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailsController.swift; sourceTree = "<group>"; };
-		36BB7092271F4C8200620CEB /* CaseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaseDetails.swift; path = "Flash Chat iOS13/Controllers/CaseDetails.swift"; sourceTree = SOURCE_ROOT; };
 		36BB7094271F5BC300620CEB /* AddCaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseController.swift; sourceTree = "<group>"; };
+		36BC26E8278369DE0084001C /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
+		36BC26F7278393FE0084001C /* CaseListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListItem.swift; sourceTree = "<group>"; };
+		36BC26FB2783A6D00084001C /* CaseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseList.swift; sourceTree = "<group>"; };
+		36BC26FF2783B6A50084001C /* CaseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetails.swift; sourceTree = "<group>"; };
+		36BC27012783B7FF0084001C /* CaseDetailsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailsUI.swift; sourceTree = "<group>"; };
 		49DD0AF6FF6C5881EDCDDC43 /* Pods-Flash Chat iOS13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.release.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.release.xcconfig"; sourceTree = "<group>"; };
 		A0F601AA4AC2EE8BDEC66344 /* Pods-Flash Chat iOS13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.debug.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.debug.xcconfig"; sourceTree = "<group>"; };
 		FFCF8F8B35866ACF7D3892D2 /* Pods_Flash_Chat_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,17 +132,20 @@
 		0B628192235DF02000E35CAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				366DA15F272F393700349DE7 /* Extensions.swift */,
+				36BC26F6278393CC0084001C /* ReusableComps */,
 				0B62818A235DF00000E35CAF /* WelcomeViewController.swift */,
-				0B62818C235DF00B00E35CAF /* RegisterViewController.swift */,
-				366DA161272F3A0900349DE7 /* RoundedButton.swift */,
 				0B62818E235DF01000E35CAF /* LoginViewController.swift */,
+				36BC26E8278369DE0084001C /* CaseViewController.swift */,
+				36BC26FB2783A6D00084001C /* CaseList.swift */,
+				36BC27012783B7FF0084001C /* CaseDetailsUI.swift */,
 				0B628190235DF01B00E35CAF /* ChatViewController.swift */,
+				366DA15F272F393700349DE7 /* Extensions.swift */,
 				36BB7090271F4BE400620CEB /* CaseDetailsController.swift */,
 				36BB7094271F5BC300620CEB /* AddCaseController.swift */,
 				366DA14B27271E2A00349DE7 /* RecordingViewController.swift */,
 				366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */,
 				366DA163272F3F8000349DE7 /* SceneViewController.swift */,
+				0B62818C235DF00B00E35CAF /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +156,8 @@
 				0B62817C235DEE8100E35CAF /* Main.storyboard */,
 				360CBEAB271B9699006D8677 /* MessageCell.swift */,
 				360CBEAC271B9699006D8677 /* MessageCell.xib */,
+				361BD264273B331100EA0E69 /* Button.swift */,
+				361BD268273B33F200EA0E69 /* Button.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,8 +165,7 @@
 		0B628194235DF03A00E35CAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				360CBEA9271B92B3006D8677 /* Cases.swift */,
-				36BB7092271F4C8200620CEB /* CaseDetails.swift */,
+				36BC26FF2783B6A50084001C /* CaseDetails.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +189,15 @@
 			);
 			name = art.scnassets;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		36BC26F6278393CC0084001C /* ReusableComps */ = {
+			isa = PBXGroup;
+			children = (
+				366DA161272F3A0900349DE7 /* RoundedButton.swift */,
+				36BC26F7278393FE0084001C /* CaseListItem.swift */,
+			);
+			path = ReusableComps;
 			sourceTree = "<group>";
 		};
 		AD927CF6F6EB4E24EAAB1496 /* Frameworks */ = {
@@ -251,6 +274,7 @@
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
 				360CBEA6271B85B2006D8677 /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
+				361BD269273B33F200EA0E69 /* Button.xib in Resources */,
 				367528C6272F5D6A00F3FE66 /* mesh.obj in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
 			);
@@ -307,17 +331,21 @@
 			files = (
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
 				36BB7091271F4BE400620CEB /* CaseDetailsController.swift in Sources */,
-				36BB7093271F4C8200620CEB /* CaseDetails.swift in Sources */,
+				36BC27002783B6A50084001C /* CaseDetails.swift in Sources */,
+				36BC26FC2783A6D00084001C /* CaseList.swift in Sources */,
 				366DA164272F3F8000349DE7 /* SceneViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
+				361BD265273B331100EA0E69 /* Button.swift in Sources */,
+				36BC26F8278393FE0084001C /* CaseListItem.swift in Sources */,
 				360CBEA8271B91ED006D8677 /* Constants.swift in Sources */,
-				360CBEAA271B92B3006D8677 /* Cases.swift in Sources */,
+				36BC27022783B7FF0084001C /* CaseDetailsUI.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				366DA14C27271E2A00349DE7 /* RecordingViewController.swift in Sources */,
 				366DA160272F393700349DE7 /* Extensions.swift in Sources */,
 				366DA162272F3A0900349DE7 /* RoundedButton.swift in Sources */,
+				36BC26E9278369DE0084001C /* CaseViewController.swift in Sources */,
 				366DA15A2729FA6C00349DE7 /* CoachingOverlay.swift in Sources */,
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
 				36BB7095271F5BC300620CEB /* AddCaseController.swift in Sources */,

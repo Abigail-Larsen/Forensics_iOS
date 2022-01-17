@@ -8,10 +8,12 @@
 
 import UIKit
 import Firebase
+import SwiftUI
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var signInButton: ButtonView!
     @IBOutlet weak var passwordTextfield: UITextField!
     
     override func viewDidLoad() {
@@ -34,5 +36,9 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
+
+    @IBSegueAction func moveToSwfitUI(_ coder: NSCoder) -> UIViewController? {
+        let caseView = CaseViewController()
+        return UIHostingController(coder: coder, rootView: caseView)
+    }
 }

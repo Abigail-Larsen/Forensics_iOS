@@ -9,7 +9,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var AddCaseBtn: UIImageView!
     let db = Firestore.firestore()
     
-    var casesList: [Cases] = []
+    var casesList: [Case] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class ChatViewController: UIViewController {
                         if let sender = data[K.FStore.senderField] as? String, let caseName = data[K.FStore.caseName] as? String, let caseNumber = data[K.FStore.caseNumber] as? String{
                             
                             print(data)
-                            let newCase = Cases(sender: sender, caseName: caseName, caseNumber: caseNumber)
+                            let newCase = Case(sender: sender, caseName: caseName, caseNumber: caseNumber, caseDescription: "description", id: 123)
                             self.casesList.append(newCase)
                             
                             DispatchQueue.main.async {
