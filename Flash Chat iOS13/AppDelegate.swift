@@ -30,11 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
-//        let supportForSceneReconstruction = ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh)
-//        guard supportForSceneReconstruction else {
-//            print("Scene Reconstruction isn't supported here")
-//            return true
-//        }
+        let supportForSceneReconstruction = ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh)
+        guard supportForSceneReconstruction else {
+            print("Scene Reconstruction isn't supported here")
+            return true
+        }
             return true
     }
 

@@ -10,43 +10,89 @@ import SwiftUI
 import Firebase
 
 struct CaseViewController: View {
+    @State var showCreateCaseModalView: Bool = false
+    
+    var options = ["Cases", "Archive", "Locations"]
+    @State private var pickerValue = "Cases"
 
     let db = Firestore.firestore()
     @State private var casesList: [Case] = []
+    
+    init() {
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(red: 0.79, green: 0.74, blue: 1.00, alpha: 1.00)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.systemGray], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
+    }
+
 
     var body: some View {
-        Color.black.ignoresSafeArea().overlay(
-            VStack {
-                HStack(alignment: .center) {
-                    Text("menu").foregroundColor(.white)
-                    Spacer()
-                    Text("My Cases").foregroundColor(.white).font(.system(size: 30))
-                    Spacer()
-                    Image("search").resizable().frame(width: 31, height: 31)
+        VStack {
+            HStack(alignment: .center) {
+                Image(systemName: "person.crop.circle")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(Color(red: 0.79, green: 0.74, blue: 1.00))
+                    .padding(.trailing, 10)
+                Text("Cases").foregroundColor(.white).font(.system(size: 24))
+                Spacer()
+                Button(action:{
+                    print("hit the search button")
+                })
+                {
+                    Image("search").resizable().frame(width: 18, height: 18)
                 }
-                
-                VStack{
-                    CaseList()
-                }
-                
-                HStack {
-                    Spacer()
-                    Button(action:{
-                        print("hit the add button")
-                    })
-                    {
-                        Image("AddIcon").resizable().frame(width: 60, height: 60)
+            }
+            
+            VStack{
+                Picker("", selection: $pickerValue) {
+                    ForEach(options, id: \.self){
+                        Text($0)
                     }
-
-                   
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding(20)
+                // CaseList()
+                Spacer()
+                if pickerValue == "Cases" {
+                    Text("You have 0 Cases").foregroundColor(.white)
+                }
+                if pickerValue == "Archive" {
+                    Text("You have 0 Archived").foregroundColor(.white)
+                }
+                if pickerValue == "Locations" {
+                    Text("You have 0 Locations").foregroundColor(.white)
+                }
+                Spacer()
+            }
+            
+            HStack {
+                Spacer()
+                Button(action:{
+                    showCreateCaseModalView = true
+                })
+                {
+                    Image(systemName: "plus.app.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color(red: 0.79, green: 0.74, blue: 1.00))
                 }
             }
-            .onAppear {
-                loadCases()
-            }
-        )
+            .navigationBarHidden(true)
+        }
+        .onAppear {
+            loadCases()
+        }
+        .sheet(isPresented: $showCreateCaseModalView) {
+            CreateCaseUI().navigationBarHidden(true)
+        }
+        .navigationTitle("")
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .padding(30)
+        .background(Color.black)
+        .edgesIgnoringSafeArea(.all)
     }
-    
+        
     
     func loadCases () {
            db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener{(QuerySnapshot, error) in

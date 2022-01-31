@@ -13,25 +13,21 @@
 		0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B62817F235DEE8400E35CAF /* Assets.xcassets */; };
 		0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B628181235DEE8400E35CAF /* LaunchScreen.storyboard */; };
 		0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62818A235DF00000E35CAF /* WelcomeViewController.swift */; };
-		0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62818C235DF00B00E35CAF /* RegisterViewController.swift */; };
-		0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62818E235DF01000E35CAF /* LoginViewController.swift */; };
 		0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628190235DF01B00E35CAF /* ChatViewController.swift */; };
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
 		360CBEA6271B85B2006D8677 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 360CBEA5271B85B2006D8677 /* GoogleService-Info.plist */; };
 		360CBEA8271B91ED006D8677 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CBEA7271B91ED006D8677 /* Constants.swift */; };
 		360CBEAD271B9699006D8677 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CBEAB271B9699006D8677 /* MessageCell.swift */; };
 		360CBEAE271B9699006D8677 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360CBEAC271B9699006D8677 /* MessageCell.xib */; };
+		360FDA7927A70EC200B5432A /* SwiftUILoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360FDA7827A70EC200B5432A /* SwiftUILoginView.swift */; };
+		360FDA7C27A71F3D00B5432A /* CreateCaseUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360FDA7B27A71F3D00B5432A /* CreateCaseUI.swift */; };
 		361BD265273B331100EA0E69 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361BD264273B331100EA0E69 /* Button.swift */; };
 		361BD269273B33F200EA0E69 /* Button.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361BD268273B33F200EA0E69 /* Button.xib */; };
 		366DA14C27271E2A00349DE7 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA14B27271E2A00349DE7 /* RecordingViewController.swift */; };
-		366DA1512727309F00349DE7 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 366DA1502727309F00349DE7 /* grid.png */; };
 		366DA15A2729FA6C00349DE7 /* CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */; };
 		366DA160272F393700349DE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA15F272F393700349DE7 /* Extensions.swift */; };
 		366DA162272F3A0900349DE7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA161272F3A0900349DE7 /* RoundedButton.swift */; };
 		366DA164272F3F8000349DE7 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA163272F3F8000349DE7 /* SceneViewController.swift */; };
-		367528C6272F5D6A00F3FE66 /* mesh.obj in Resources */ = {isa = PBXBuildFile; fileRef = 367528C5272F5D6A00F3FE66 /* mesh.obj */; };
-		36BB7091271F4BE400620CEB /* CaseDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB7090271F4BE400620CEB /* CaseDetailsController.swift */; };
-		36BB7095271F5BC300620CEB /* AddCaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BB7094271F5BC300620CEB /* AddCaseController.swift */; };
 		36BC26E9278369DE0084001C /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26E8278369DE0084001C /* CaseViewController.swift */; };
 		36BC26F8278393FE0084001C /* CaseListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26F7278393FE0084001C /* CaseListItem.swift */; };
 		36BC26FC2783A6D00084001C /* CaseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26FB2783A6D00084001C /* CaseList.swift */; };
@@ -49,27 +45,21 @@
 		0B628182235DEE8400E35CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B628184235DEE8400E35CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B62818A235DF00000E35CAF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		0B62818C235DF00B00E35CAF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		0B62818E235DF01000E35CAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B628190235DF01B00E35CAF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0B62819D235F0F4D00E35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		360CBEA5271B85B2006D8677 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		360CBEA7271B91ED006D8677 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		360CBEAB271B9699006D8677 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		360CBEAC271B9699006D8677 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		360FDA7827A70EC200B5432A /* SwiftUILoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILoginView.swift; sourceTree = "<group>"; };
+		360FDA7B27A71F3D00B5432A /* CreateCaseUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateCaseUI.swift; path = "Flash Chat iOS13/Controllers/CreateCaseUI.swift"; sourceTree = SOURCE_ROOT; };
 		361BD264273B331100EA0E69 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		361BD268273B33F200EA0E69 /* Button.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Button.xib; sourceTree = "<group>"; };
 		366DA14B27271E2A00349DE7 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
-		366DA1502727309F00349DE7 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
-		366DA157272733A100349DE7 /* New_RedBase_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = New_RedBase_Color.png; path = /Users/abigailthelin/Desktop/DGM_Forensics/New_RedBase_Color.png; sourceTree = "<absolute>"; };
-		366DA1582727351800349DE7 /* diceCollada.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = diceCollada.scn; path = /Users/abigailthelin/Desktop/DGM_Forensics/diceCollada.scn; sourceTree = "<absolute>"; };
 		366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachingOverlay.swift; sourceTree = "<group>"; };
 		366DA15F272F393700349DE7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		366DA161272F3A0900349DE7 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		366DA163272F3F8000349DE7 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
-		367528C5272F5D6A00F3FE66 /* mesh.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mesh.obj; sourceTree = "<group>"; };
-		36BB7090271F4BE400620CEB /* CaseDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailsController.swift; sourceTree = "<group>"; };
-		36BB7094271F5BC300620CEB /* AddCaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCaseController.swift; sourceTree = "<group>"; };
 		36BC26E8278369DE0084001C /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
 		36BC26F7278393FE0084001C /* CaseListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListItem.swift; sourceTree = "<group>"; };
 		36BC26FB2783A6D00084001C /* CaseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseList.swift; sourceTree = "<group>"; };
@@ -117,7 +107,6 @@
 				360CBEA7271B91ED006D8677 /* Constants.swift */,
 				0B628176235DEE8100E35CAF /* AppDelegate.swift */,
 				0B628178235DEE8100E35CAF /* SceneDelegate.swift */,
-				366DA14D27272FD400349DE7 /* art.scnassets */,
 				0B628194235DF03A00E35CAF /* Models */,
 				0B628193235DF03400E35CAF /* Views */,
 				0B628192235DF02000E35CAF /* Controllers */,
@@ -132,20 +121,18 @@
 		0B628192235DF02000E35CAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				360FDA7A27A71F2C00B5432A /* modals */,
 				36BC26F6278393CC0084001C /* ReusableComps */,
 				0B62818A235DF00000E35CAF /* WelcomeViewController.swift */,
-				0B62818E235DF01000E35CAF /* LoginViewController.swift */,
+				360FDA7827A70EC200B5432A /* SwiftUILoginView.swift */,
 				36BC26E8278369DE0084001C /* CaseViewController.swift */,
-				36BC26FB2783A6D00084001C /* CaseList.swift */,
 				36BC27012783B7FF0084001C /* CaseDetailsUI.swift */,
+				36BC26FB2783A6D00084001C /* CaseList.swift */,
 				0B628190235DF01B00E35CAF /* ChatViewController.swift */,
 				366DA15F272F393700349DE7 /* Extensions.swift */,
-				36BB7090271F4BE400620CEB /* CaseDetailsController.swift */,
-				36BB7094271F5BC300620CEB /* AddCaseController.swift */,
 				366DA14B27271E2A00349DE7 /* RecordingViewController.swift */,
 				366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */,
 				366DA163272F3F8000349DE7 /* SceneViewController.swift */,
-				0B62818C235DF00B00E35CAF /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,16 +166,12 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		366DA14D27272FD400349DE7 /* art.scnassets */ = {
+		360FDA7A27A71F2C00B5432A /* modals */ = {
 			isa = PBXGroup;
 			children = (
-				367528C5272F5D6A00F3FE66 /* mesh.obj */,
-				366DA157272733A100349DE7 /* New_RedBase_Color.png */,
-				366DA1582727351800349DE7 /* diceCollada.scn */,
-				366DA1502727309F00349DE7 /* grid.png */,
+				360FDA7B27A71F3D00B5432A /* CreateCaseUI.swift */,
 			);
-			name = art.scnassets;
-			path = ..;
+			path = modals;
 			sourceTree = "<group>";
 		};
 		36BC26F6278393CC0084001C /* ReusableComps */ = {
@@ -269,13 +252,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */,
-				366DA1512727309F00349DE7 /* grid.png in Resources */,
 				360CBEAE271B9699006D8677 /* MessageCell.xib in Resources */,
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
 				360CBEA6271B85B2006D8677 /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
 				361BD269273B33F200EA0E69 /* Button.xib in Resources */,
-				367528C6272F5D6A00F3FE66 /* mesh.obj in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,13 +311,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
-				36BB7091271F4BE400620CEB /* CaseDetailsController.swift in Sources */,
 				36BC27002783B6A50084001C /* CaseDetails.swift in Sources */,
 				36BC26FC2783A6D00084001C /* CaseList.swift in Sources */,
+				360FDA7C27A71F3D00B5432A /* CreateCaseUI.swift in Sources */,
+				360FDA7927A70EC200B5432A /* SwiftUILoginView.swift in Sources */,
 				366DA164272F3F8000349DE7 /* SceneViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
-				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
 				361BD265273B331100EA0E69 /* Button.swift in Sources */,
 				36BC26F8278393FE0084001C /* CaseListItem.swift in Sources */,
 				360CBEA8271B91ED006D8677 /* Constants.swift in Sources */,
@@ -347,8 +328,6 @@
 				366DA162272F3A0900349DE7 /* RoundedButton.swift in Sources */,
 				36BC26E9278369DE0084001C /* CaseViewController.swift in Sources */,
 				366DA15A2729FA6C00349DE7 /* CoachingOverlay.swift in Sources */,
-				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
-				36BB7095271F5BC300620CEB /* AddCaseController.swift in Sources */,
 				360CBEAD271B9699006D8677 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -479,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
