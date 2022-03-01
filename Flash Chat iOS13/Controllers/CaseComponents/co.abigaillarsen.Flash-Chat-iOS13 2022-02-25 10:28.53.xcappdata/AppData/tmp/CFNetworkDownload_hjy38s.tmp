@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": 402,
+    "message": "Quota has been exceeded for this project. Please visit the Firebase pricing page to learn more."
+  }
+}

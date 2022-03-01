@@ -18,16 +18,14 @@ struct OvalTextFieldStyle: TextFieldStyle {
 }
 
 struct CreateCaseUI: View {
-    @State private var caseName: String = "Lehi Office"
-    @State private var caseNumber: String = "123456"
+    @State private var caseName: String = ""
+    @State private var caseNumber: String = ""
+    @ObservedObject var caseUpdater = CaseUpdater()
     
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 20) {
                 Text("Create Case").foregroundColor(.white).font(.system(size: 24, weight: .bold))
-                
-                
-                
                 
                 TextField("Case Name", text: $caseName, prompt: Text("Case Name..."))
                     .foregroundColor(.white)
@@ -41,11 +39,16 @@ struct CreateCaseUI: View {
                 NavigationLink(
                     destination: CaseDetailsUI(caseNumber: $caseNumber).navigationBarHidden(true)
                 ) {
-                    Label("Add Case", systemImage: "")
-                        .foregroundColor(.black)
-                        .padding(15)
-                        .background(Color(red: 0.79, green: 0.74, blue: 1.00))
-                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                    Button(action:{
+                        caseUpdater.addCase(caseName: caseName, caseNumber: caseNumber)
+                    })
+                    {
+                        Label("Add Case", systemImage: "")
+                            .foregroundColor(.black)
+                            .padding(15)
+                            .background(Color(red: 0.79, green: 0.74, blue: 1.00))
+                            .clipShape(RoundedRectangle(cornerRadius: 5))
+                    }
                 }
                 Spacer()
             }

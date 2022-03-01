@@ -19,20 +19,29 @@
 		360CBEA8271B91ED006D8677 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CBEA7271B91ED006D8677 /* Constants.swift */; };
 		360CBEAD271B9699006D8677 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CBEAB271B9699006D8677 /* MessageCell.swift */; };
 		360CBEAE271B9699006D8677 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360CBEAC271B9699006D8677 /* MessageCell.xib */; };
+		360CE5B127CD626F00B53426 /* CaseScanItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CE5B027CD626F00B53426 /* CaseScanItem.swift */; };
 		360FDA7927A70EC200B5432A /* SwiftUILoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360FDA7827A70EC200B5432A /* SwiftUILoginView.swift */; };
 		360FDA7C27A71F3D00B5432A /* CreateCaseUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360FDA7B27A71F3D00B5432A /* CreateCaseUI.swift */; };
 		361BD265273B331100EA0E69 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361BD264273B331100EA0E69 /* Button.swift */; };
 		361BD269273B33F200EA0E69 /* Button.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361BD268273B33F200EA0E69 /* Button.xib */; };
+		363FA15927B6DD9C00783D9D /* CaseDetailWithNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FA15827B6DD9C00783D9D /* CaseDetailWithNote.swift */; };
+		363FA15B27B6F61A00783D9D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FA15A27B6F61A00783D9D /* FirebaseManager.swift */; };
+		363FA15D27B81ED600783D9D /* EditImgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FA15C27B81ED600783D9D /* EditImgInfo.swift */; };
+		3648939027C944A4004259E8 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648938F27C944A4004259E8 /* AudioRecorder.swift */; };
+		3648939427C945C9004259E8 /* AddAudioRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648939327C945C9004259E8 /* AddAudioRecording.swift */; };
+		3648939627C95027004259E8 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648939527C95027004259E8 /* AudioPlayer.swift */; };
+		3648939827C960B3004259E8 /* CaseAudioRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3648939727C960B3004259E8 /* CaseAudioRecording.swift */; };
+		364FB90027B0567800EA3459 /* ImagePIckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364FB8FF27B0567700EA3459 /* ImagePIckerView.swift */; };
 		366DA14C27271E2A00349DE7 /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA14B27271E2A00349DE7 /* RecordingViewController.swift */; };
 		366DA15A2729FA6C00349DE7 /* CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */; };
 		366DA160272F393700349DE7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA15F272F393700349DE7 /* Extensions.swift */; };
-		366DA162272F3A0900349DE7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA161272F3A0900349DE7 /* RoundedButton.swift */; };
 		366DA164272F3F8000349DE7 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DA163272F3F8000349DE7 /* SceneViewController.swift */; };
 		36BC26E9278369DE0084001C /* CaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26E8278369DE0084001C /* CaseViewController.swift */; };
 		36BC26F8278393FE0084001C /* CaseListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26F7278393FE0084001C /* CaseListItem.swift */; };
-		36BC26FC2783A6D00084001C /* CaseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26FB2783A6D00084001C /* CaseList.swift */; };
-		36BC27002783B6A50084001C /* CaseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC26FF2783B6A50084001C /* CaseDetails.swift */; };
 		36BC27022783B7FF0084001C /* CaseDetailsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BC27012783B7FF0084001C /* CaseDetailsUI.swift */; };
+		36E9D3AB27BEEE6500D9F18D /* SingleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9D3AA27BEEE6500D9F18D /* SingleImage.swift */; };
+		36E9D3AF27BEF52000D9F18D /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9D3AE27BEF52000D9F18D /* ARView.swift */; };
+		36E9D3B127BEFF2900D9F18D /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E9D3B027BEFF2900D9F18D /* ScanningViewController.swift */; };
 		D3522C4977E11419D2B7881D /* Pods_Flash_Chat_iOS13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFCF8F8B35866ACF7D3892D2 /* Pods_Flash_Chat_iOS13.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,20 +60,29 @@
 		360CBEA7271B91ED006D8677 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		360CBEAB271B9699006D8677 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		360CBEAC271B9699006D8677 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		360CE5B027CD626F00B53426 /* CaseScanItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseScanItem.swift; sourceTree = "<group>"; };
 		360FDA7827A70EC200B5432A /* SwiftUILoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILoginView.swift; sourceTree = "<group>"; };
 		360FDA7B27A71F3D00B5432A /* CreateCaseUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateCaseUI.swift; path = "Flash Chat iOS13/Controllers/CreateCaseUI.swift"; sourceTree = SOURCE_ROOT; };
 		361BD264273B331100EA0E69 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		361BD268273B33F200EA0E69 /* Button.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Button.xib; sourceTree = "<group>"; };
+		363FA15827B6DD9C00783D9D /* CaseDetailWithNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailWithNote.swift; sourceTree = "<group>"; };
+		363FA15A27B6F61A00783D9D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		363FA15C27B81ED600783D9D /* EditImgInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImgInfo.swift; sourceTree = "<group>"; };
+		3648938F27C944A4004259E8 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		3648939327C945C9004259E8 /* AddAudioRecording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAudioRecording.swift; sourceTree = "<group>"; };
+		3648939527C95027004259E8 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		3648939727C960B3004259E8 /* CaseAudioRecording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseAudioRecording.swift; sourceTree = "<group>"; };
+		364FB8FF27B0567700EA3459 /* ImagePIckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePIckerView.swift; sourceTree = "<group>"; };
 		366DA14B27271E2A00349DE7 /* RecordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
 		366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachingOverlay.swift; sourceTree = "<group>"; };
 		366DA15F272F393700349DE7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		366DA161272F3A0900349DE7 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		366DA163272F3F8000349DE7 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		36BC26E8278369DE0084001C /* CaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseViewController.swift; sourceTree = "<group>"; };
 		36BC26F7278393FE0084001C /* CaseListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseListItem.swift; sourceTree = "<group>"; };
-		36BC26FB2783A6D00084001C /* CaseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseList.swift; sourceTree = "<group>"; };
-		36BC26FF2783B6A50084001C /* CaseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetails.swift; sourceTree = "<group>"; };
 		36BC27012783B7FF0084001C /* CaseDetailsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailsUI.swift; sourceTree = "<group>"; };
+		36E9D3AA27BEEE6500D9F18D /* SingleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImage.swift; sourceTree = "<group>"; };
+		36E9D3AE27BEF52000D9F18D /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		36E9D3B027BEFF2900D9F18D /* ScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningViewController.swift; sourceTree = "<group>"; };
 		49DD0AF6FF6C5881EDCDDC43 /* Pods-Flash Chat iOS13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.release.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.release.xcconfig"; sourceTree = "<group>"; };
 		A0F601AA4AC2EE8BDEC66344 /* Pods-Flash Chat iOS13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.debug.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.debug.xcconfig"; sourceTree = "<group>"; };
 		FFCF8F8B35866ACF7D3892D2 /* Pods_Flash_Chat_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +125,6 @@
 				360CBEA7271B91ED006D8677 /* Constants.swift */,
 				0B628176235DEE8100E35CAF /* AppDelegate.swift */,
 				0B628178235DEE8100E35CAF /* SceneDelegate.swift */,
-				0B628194235DF03A00E35CAF /* Models */,
 				0B628193235DF03400E35CAF /* Views */,
 				0B628192235DF02000E35CAF /* Controllers */,
 				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
@@ -121,15 +138,15 @@
 		0B628192235DF02000E35CAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				364CFC0627AB1716006A01F3 /* Methods */,
+				3648939227C9457B004259E8 /* SwiftControllers */,
+				3648939127C94568004259E8 /* CaseComponents */,
 				360FDA7A27A71F2C00B5432A /* modals */,
 				36BC26F6278393CC0084001C /* ReusableComps */,
-				0B62818A235DF00000E35CAF /* WelcomeViewController.swift */,
 				360FDA7827A70EC200B5432A /* SwiftUILoginView.swift */,
 				36BC26E8278369DE0084001C /* CaseViewController.swift */,
 				36BC27012783B7FF0084001C /* CaseDetailsUI.swift */,
-				36BC26FB2783A6D00084001C /* CaseList.swift */,
 				0B628190235DF01B00E35CAF /* ChatViewController.swift */,
-				366DA15F272F393700349DE7 /* Extensions.swift */,
 				366DA14B27271E2A00349DE7 /* RecordingViewController.swift */,
 				366DA1592729FA6C00349DE7 /* CoachingOverlay.swift */,
 				366DA163272F3F8000349DE7 /* SceneViewController.swift */,
@@ -149,14 +166,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0B628194235DF03A00E35CAF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				36BC26FF2783B6A50084001C /* CaseDetails.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		0B96C4F69A79FBD50684A7C1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,15 +178,49 @@
 		360FDA7A27A71F2C00B5432A /* modals */ = {
 			isa = PBXGroup;
 			children = (
+				3648939727C960B3004259E8 /* CaseAudioRecording.swift */,
+				3648939327C945C9004259E8 /* AddAudioRecording.swift */,
 				360FDA7B27A71F3D00B5432A /* CreateCaseUI.swift */,
+				363FA15C27B81ED600783D9D /* EditImgInfo.swift */,
 			);
 			path = modals;
+			sourceTree = "<group>";
+		};
+		3648939127C94568004259E8 /* CaseComponents */ = {
+			isa = PBXGroup;
+			children = (
+				363FA15827B6DD9C00783D9D /* CaseDetailWithNote.swift */,
+				36E9D3AA27BEEE6500D9F18D /* SingleImage.swift */,
+				36E9D3B027BEFF2900D9F18D /* ScanningViewController.swift */,
+				360CE5B027CD626F00B53426 /* CaseScanItem.swift */,
+			);
+			path = CaseComponents;
+			sourceTree = "<group>";
+		};
+		3648939227C9457B004259E8 /* SwiftControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B62818A235DF00000E35CAF /* WelcomeViewController.swift */,
+				3648938F27C944A4004259E8 /* AudioRecorder.swift */,
+				3648939527C95027004259E8 /* AudioPlayer.swift */,
+				36E9D3AE27BEF52000D9F18D /* ARView.swift */,
+				364FB8FF27B0567700EA3459 /* ImagePIckerView.swift */,
+			);
+			path = SwiftControllers;
+			sourceTree = "<group>";
+		};
+		364CFC0627AB1716006A01F3 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				363FA15A27B6F61A00783D9D /* FirebaseManager.swift */,
+				366DA15F272F393700349DE7 /* Extensions.swift */,
+			);
+			path = Methods;
 			sourceTree = "<group>";
 		};
 		36BC26F6278393CC0084001C /* ReusableComps */ = {
 			isa = PBXGroup;
 			children = (
-				366DA161272F3A0900349DE7 /* RoundedButton.swift */,
 				36BC26F7278393FE0084001C /* CaseListItem.swift */,
 			);
 			path = ReusableComps;
@@ -310,22 +353,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363FA15D27B81ED600783D9D /* EditImgInfo.swift in Sources */,
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
-				36BC27002783B6A50084001C /* CaseDetails.swift in Sources */,
-				36BC26FC2783A6D00084001C /* CaseList.swift in Sources */,
 				360FDA7C27A71F3D00B5432A /* CreateCaseUI.swift in Sources */,
 				360FDA7927A70EC200B5432A /* SwiftUILoginView.swift in Sources */,
+				36E9D3AF27BEF52000D9F18D /* ARView.swift in Sources */,
+				360CE5B127CD626F00B53426 /* CaseScanItem.swift in Sources */,
+				3648939427C945C9004259E8 /* AddAudioRecording.swift in Sources */,
+				363FA15B27B6F61A00783D9D /* FirebaseManager.swift in Sources */,
+				3648939027C944A4004259E8 /* AudioRecorder.swift in Sources */,
 				366DA164272F3F8000349DE7 /* SceneViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
+				3648939627C95027004259E8 /* AudioPlayer.swift in Sources */,
+				3648939827C960B3004259E8 /* CaseAudioRecording.swift in Sources */,
 				361BD265273B331100EA0E69 /* Button.swift in Sources */,
+				364FB90027B0567800EA3459 /* ImagePIckerView.swift in Sources */,
 				36BC26F8278393FE0084001C /* CaseListItem.swift in Sources */,
 				360CBEA8271B91ED006D8677 /* Constants.swift in Sources */,
+				36E9D3AB27BEEE6500D9F18D /* SingleImage.swift in Sources */,
+				36E9D3B127BEFF2900D9F18D /* ScanningViewController.swift in Sources */,
+				363FA15927B6DD9C00783D9D /* CaseDetailWithNote.swift in Sources */,
 				36BC27022783B7FF0084001C /* CaseDetailsUI.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				366DA14C27271E2A00349DE7 /* RecordingViewController.swift in Sources */,
 				366DA160272F393700349DE7 /* Extensions.swift in Sources */,
-				366DA162272F3A0900349DE7 /* RoundedButton.swift in Sources */,
 				36BC26E9278369DE0084001C /* CaseViewController.swift in Sources */,
 				366DA15A2729FA6C00349DE7 /* CoachingOverlay.swift in Sources */,
 				360CBEAD271B9699006D8677 /* MessageCell.swift in Sources */,
@@ -480,7 +532,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.abigaillarsen.UVU-DGM-FORENSICS";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.abigaillarsen.Flash-Chat-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -499,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.abigaillarsen.UVU-DGM-FORENSICS";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.abigaillarsen.Flash-Chat-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -9,17 +9,25 @@
 import SwiftUI
 import Firebase
 
+struct CaseData: Identifiable, Codable {
+    var id: String
+    var caseName: String
+    var caseNumber: String
+    var sender: String
+}
+
 struct CaseViewController: View {
     @State var showCreateCaseModalView: Bool = false
     
     var options = ["Cases", "Archive", "Locations"]
     @State private var pickerValue = "Cases"
+    
+    @ObservedObject var caseGetter = CaseGetter()
+    
 
-    let db = Firestore.firestore()
-    @State private var casesList: [Case] = []
     
     init() {
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(red: 0.79, green: 0.74, blue: 1.00, alpha: 1.00)
+        UISegmentedControl.appearance().selectedSegmentTintColor = .white
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.systemGray], for: .normal)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
     }
@@ -28,12 +36,12 @@ struct CaseViewController: View {
     var body: some View {
         VStack {
             HStack(alignment: .center) {
-                Image(systemName: "person.crop.circle")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(Color(red: 0.79, green: 0.74, blue: 1.00))
-                    .padding(.trailing, 10)
-                Text("Cases").foregroundColor(.white).font(.system(size: 24))
+//                Image(systemName: "person.crop.circle")
+//                    .resizable()
+//                    .frame(width: 30, height: 30)
+//                    .foregroundColor(Color(red: 0.79, green: 0.74, blue: 1.00))
+//                    .padding(.trailing, 10)
+                Text("Cases").foregroundColor(.white).font(.system(size: 36, weight: .bold))
                 Spacer()
                 Button(action:{
                     print("hit the search button")
@@ -42,6 +50,7 @@ struct CaseViewController: View {
                     Image("search").resizable().frame(width: 18, height: 18)
                 }
             }
+            .padding(.top, 30)
             
             VStack{
                 Picker("", selection: $pickerValue) {
@@ -50,17 +59,35 @@ struct CaseViewController: View {
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
-                .padding(20)
-                // CaseList()
-                Spacer()
+                .padding(.bottom, 10)
                 if pickerValue == "Cases" {
-                    Text("You have 0 Cases").foregroundColor(.white)
+                    if caseGetter.cases.isEmpty {
+                        Spacer()
+                        Text("You have 0 Cases").foregroundColor(.white)
+                        Spacer()
+                    } else {
+                        ScrollView {
+                          ForEach(caseGetter.cases) { details in
+                            VStack(alignment: .leading){
+                                CaseListItem(caseName: details.caseName, caseNumber: .constant(details.caseNumber)).frame(height:80)
+                            }
+                            .padding(.top, 10)
+                          }
+                            .background(Color.black)
+                            .edgesIgnoringSafeArea(.all)
+                        }
+                        Spacer()
+                    }
                 }
                 if pickerValue == "Archive" {
+                    Spacer()
                     Text("You have 0 Archived").foregroundColor(.white)
+                    Spacer()
                 }
                 if pickerValue == "Locations" {
+                    Spacer()
                     Text("You have 0 Locations").foregroundColor(.white)
+                    Spacer()
                 }
                 Spacer()
             }
@@ -71,16 +98,17 @@ struct CaseViewController: View {
                     showCreateCaseModalView = true
                 })
                 {
-                    Image(systemName: "plus.app.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .foregroundColor(Color(red: 0.79, green: 0.74, blue: 1.00))
+                    Label("Add Case", systemImage: "plus.circle")
+                        .foregroundColor(.black)
+                        .padding(10)
                 }
+                .background(Color(red: 0.79, green: 0.74, blue: 1.00))
+                .cornerRadius(15)
+            }
+            .onAppear{
+                caseGetter.fetchAllCases()
             }
             .navigationBarHidden(true)
-        }
-        .onAppear {
-            loadCases()
         }
         .sheet(isPresented: $showCreateCaseModalView) {
             CreateCaseUI().navigationBarHidden(true)
@@ -92,39 +120,10 @@ struct CaseViewController: View {
         .background(Color.black)
         .edgesIgnoringSafeArea(.all)
     }
-        
-    
-    func loadCases () {
-           db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener{(QuerySnapshot, error) in
-               casesList = []
-               if let e = error {
-                   print("Error retrieving data from firestore", e)
-               } else {
-                   if let snapshotDocuments = QuerySnapshot?.documents{
-                       for doc in snapshotDocuments {
-                           let data = doc.data()
-                           print(data)
-                           if let sender = data[K.FStore.senderField] as? String, let caseName = data[K.FStore.caseName] as? String, let caseNumber = data[K.FStore.caseNumber] as? String{
-                               
-                               print(data)
-                               let newCase = Case(sender: sender, caseName: caseName, caseNumber: caseNumber,  caseDescription: "description", id: 123)
-                               self.casesList.append(newCase)
-                               
-//                               DispatchQueue.main.async {
-//                                   self.tableView.reloadData()
-//                               }
-                           }
-                       }
-                   }
-               }
-           }
-       }
-    
-    
-    
 }
 
 struct CaseViewController_Previews: PreviewProvider {
+    @State static var caseData = [["caseName": "lehi", "date": 1635196214.231723, "sender": "1@2.com", "caseNumber": 2468, "id": 1111]]
     static var previews: some View {
         CaseViewController()
     }

@@ -11,28 +11,42 @@ import SwiftUI
 struct CaseListItem: View {
     
     var caseName: String
-    var caseDescription: String
+    @Binding var caseNumber: String
+    
     var body: some View {
-        Color.black.ignoresSafeArea().overlay(
             HStack {
-                Image("folder").resizable().frame(width: 23, height: 17).padding(.leading, 25).padding(.trailing, 30 )
-                VStack(alignment: .leading) {
-                    Text(caseName).foregroundColor(.white).font(.system(size:15, weight: .heavy))
-                    Text(caseDescription).foregroundColor(.white).font(.system(size:12, weight: .light))
+                
+                NavigationLink(
+                    destination: CaseDetailsUI(caseNumber: $caseNumber)
+                ) {
+                    Image(systemName: "folder.fill")
+                        .foregroundColor(.white)
+                        .padding(.leading, 25)
+                    
+                    VStack(alignment: .leading) {
+                        Text(caseNumber)
+                            .foregroundColor(.white)
+                            .font(.system(size: 20, weight: .medium))
+                        Text(caseName)
+                            .foregroundColor(.white)
+                            .font(.system(size: 14, weight: .light))
+                    }.padding(15)
+                    Spacer()
                 }
-                Spacer()
-                Image("downArrow").frame(width: 33, height: 33).padding(.trailing, 30)
             }
-        ).overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.white, lineWidth: 2)
-        )
+            .frame(width: 370, height: 80)
+            .background(
+                RoundedRectangle(
+                    cornerRadius: 10,
+                    style: .continuous
+                )
+                .fill(Color(red: 0.11, green: 0.11, blue: 0.11))
+            )
     }
 }
 
 struct CaseListItem_Previews: PreviewProvider {
     static var previews: some View {
-        CaseListItem(caseName: "Testing", caseDescription: "case description").previewLayout(.fixed(width: 350, height: 75
-        ))
+        CaseListItem(caseName: "Downtown Case", caseNumber:.constant("CW321456789"))
     }
 }

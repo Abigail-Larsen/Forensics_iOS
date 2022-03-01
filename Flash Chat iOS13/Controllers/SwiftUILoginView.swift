@@ -7,7 +7,8 @@
 //
 
 import SwiftUI
-
+import Firebase
+import Combine
 
 struct OvalTextFieldStyled: TextFieldStyle {
     func _body(configuration: TextField<Self._Label>) -> some View {
@@ -21,10 +22,12 @@ struct OvalTextFieldStyled: TextFieldStyle {
 
 
 struct SwiftUILoginView: View {
+    @State var isLinkActive = false
+    @State private var username: String = "1@3.gmail.com";
+    @State private var password: String = "123456";
+    @State private var caseNumber: String = "2468";
     
-    @State private var username: String = "USER12345!"
-    @State private var password: String = "123456"
-    
+
     var body: some View {
         Color.black.ignoresSafeArea().overlay(
             VStack(spacing: 50) {
@@ -36,20 +39,24 @@ struct SwiftUILoginView: View {
                         .foregroundColor(.white)
                         .textFieldStyle(OvalTextFieldStyled())
                     
-                    TextField("Password", text: $password, prompt: Text("Password..."))
+                    SecureField("Password", text: $password, prompt: Text("Password..."))
                         .foregroundColor(.white)
                         .textFieldStyle(OvalTextFieldStyled())
                 }
                 
                 
                 NavigationLink(
-                    destination: CaseViewController().navigationBarHidden(true)
+                    destination: CaseViewController().navigationBarHidden(true),
+//                    destination: CaseDetailsUI(caseNumber: $caseNumber),
+                    isActive: $isLinkActive
                 ) {
-                    Text("Sign In")
-                        .foregroundColor(.black)
-                        .padding(10)
-                        .background(Color(red: 0.79, green: 0.74, blue: 1.00))
-                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                    Button(action: { login() }) {
+                        Text("Sign In")
+                            .foregroundColor(.black)
+                            .padding(10)
+                            .background(Color(red: 0.79, green: 0.74, blue: 1.00))
+                            .clipShape(RoundedRectangle(cornerRadius: 5))
+                    }
                 }
                 Spacer()
 
@@ -58,6 +65,17 @@ struct SwiftUILoginView: View {
                 .padding(.top, 60)
         )
     }
+    
+    func login() {
+           Auth.auth().signIn(withEmail: username, password: password) { (result, error) in
+               if error != nil {
+                   print("ERROR",error?.localizedDescription ?? "")
+               } else {
+                   print("success")
+                   self.isLinkActive = true
+               }
+           }
+       }
 }
 
 struct SwiftUILoginView_Previews: PreviewProvider {
@@ -65,3 +83,4 @@ struct SwiftUILoginView_Previews: PreviewProvider {
         SwiftUILoginView()
     }
 }
+

@@ -1,13 +1,14 @@
+////
+////  AppDelegate.swift
+////  Flash Chat iOS13
+////
+////  Created by Angela Yu on 21/10/2019.
+////  Copyright © 2019 Angela Yu. All rights reserved.
+////
 //
-//  AppDelegate.swift
-//  Flash Chat iOS13
-//
-//  Created by Angela Yu on 21/10/2019.
-//  Copyright © 2019 Angela Yu. All rights reserved.
-//
-
 import UIKit
 import Firebase
+import SwiftUI
 import IQKeyboardManagerSwift
 
 
@@ -19,7 +20,6 @@ import RealityKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
       FirebaseApp.configure()
@@ -29,12 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        
+
         let supportForSceneReconstruction = ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh)
         guard supportForSceneReconstruction else {
-            print("Scene Reconstruction isn't supported here")
+            print("Scene Reconstruction isn't supported here!!!!!")
             return true
         }
+            print("Scene Reconstruction IS supported here!!!!!")
             return true
     }
 
@@ -51,7 +52,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
-
