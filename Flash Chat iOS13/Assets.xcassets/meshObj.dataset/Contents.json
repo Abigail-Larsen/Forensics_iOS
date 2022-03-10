@@ -1,0 +1,13 @@
+{
+  "data" : [
+    {
+      "filename" : "meshObj.obj",
+      "idiom" : "universal",
+      "universal-type-identifier" : "public.geometry-definition-format"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

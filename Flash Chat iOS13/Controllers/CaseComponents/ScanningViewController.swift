@@ -7,6 +7,8 @@
 //
 
 import SwiftUI
+import ARKit
+import RealityKit
 
 struct ScanningViewController: View {
     @Binding var caseNumber: String
@@ -59,3 +61,37 @@ struct NavigationIndicator: UIViewControllerRepresentable {
    NavigationIndicator.UIViewControllerType, context:
    UIViewControllerRepresentableContext<NavigationIndicator>) { }
 }
+
+//struct RealityKitView: UIViewControllerRepresentable {
+////    typealias UIViewControllerType = ARView
+//    
+//    func makeUIViewController(context: Context) -> ARView {
+//        var view: ARView = ARView()
+//
+//                // Start AR session
+//        let session = view.session
+//        let config = ARWorldTrackingConfiguration()
+//        config.planeDetection = [.horizontal,.vertical]
+//        config.environmentTexturing = .automatic
+//        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh){
+//            config.sceneReconstruction = .mesh
+//        }
+//        view.session.delegate = context.coordinator
+//        view.session.run(config)
+//
+//                // Add coaching overlay
+//        let coachingOverlay = ARCoachingOverlayView()
+//        coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        coachingOverlay.session = session
+//        coachingOverlay.goal = .horizontalPlane
+//        return view
+//    }
+//    
+//    func updateUIViewController(_ uiViewController: ARView, context: Context) {
+//        print("updateUIViewController", context)
+//    }
+//    func didFailWithError() {
+//        print("ERROR BITCH")
+//    }
+//    
+//}

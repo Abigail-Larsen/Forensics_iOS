@@ -42,36 +42,6 @@ extension simd_float4x4 {
     }
 }
 
-extension ARMeshClassification {
-    var description: String {
-        switch self {
-        case .ceiling: return "Ceiling"
-        case .door: return "Door"
-        case .floor: return "Floor"
-        case .seat: return "Seat"
-        case .table: return "Table"
-        case .wall: return "Wall"
-        case .window: return "Window"
-        case .none: return "None"
-        @unknown default: return "Unknown"
-        }
-    }
-    
-    var color: UIColor {
-        switch self {
-        case .ceiling: return .cyan
-        case .door: return .brown
-        case .floor: return .red
-        case .seat: return .purple
-        case .table: return .yellow
-        case .wall: return .green
-        case .window: return .blue
-        case .none: return .lightGray
-        @unknown default: return .gray
-        }
-    }
-}
-
 extension Transform {
     static func * (left: Transform, right: Transform) -> Transform {
         return Transform(matrix: simd_mul(left.matrix, right.matrix))
@@ -88,13 +58,13 @@ extension ARMeshGeometry {
     
     /// To get the mesh's classification, the sample app parses the classification's raw data and instantiates an
     /// `ARMeshClassification` object. For efficiency, ARKit stores classifications in a Metal buffer in `ARMeshGeometry`.
-    func classificationOf(faceWithIndex index: Int) -> ARMeshClassification {
-        guard let classification = classification else { return .none }
-        assert(classification.format == MTLVertexFormat.uchar, "Expected one unsigned char (one byte) per classification")
-        let classificationPointer = classification.buffer.contents().advanced(by: classification.offset + (classification.stride * index))
-        let classificationValue = Int(classificationPointer.assumingMemoryBound(to: CUnsignedChar.self).pointee)
-        return ARMeshClassification(rawValue: classificationValue) ?? .none
-    }
+//    func classificationOf(faceWithIndex index: Int) -> ARMeshClassification {
+//        guard let classification = classification else { return .none }
+//        assert(classification.format == MTLVertexFormat.uchar, "Expected one unsigned char (one byte) per classification")
+//        let classificationPointer = classification.buffer.contents().advanced(by: classification.offset + (classification.stride * index))
+//        let classificationValue = Int(classificationPointer.assumingMemoryBound(to: CUnsignedChar.self).pointee)
+//        return ARMeshClassification(rawValue: classificationValue) ?? .none
+//    }
     
     func vertexIndicesOf(faceWithIndex faceIndex: Int) -> [UInt32] {
         assert(faces.bytesPerIndex == MemoryLayout<UInt32>.size, "Expected one UInt32 (four bytes) per vertex index")

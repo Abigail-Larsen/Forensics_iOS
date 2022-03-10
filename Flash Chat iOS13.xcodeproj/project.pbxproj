@@ -24,6 +24,10 @@
 		360FDA7C27A71F3D00B5432A /* CreateCaseUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360FDA7B27A71F3D00B5432A /* CreateCaseUI.swift */; };
 		361BD265273B331100EA0E69 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361BD264273B331100EA0E69 /* Button.swift */; };
 		361BD269273B33F200EA0E69 /* Button.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361BD268273B33F200EA0E69 /* Button.xib */; };
+		3620E93A27D95907007A9935 /* ScanObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3620E93927D95907007A9935 /* ScanObj.swift */; };
+		3620E93D27D95D1B007A9935 /* meshObj.obj in Resources */ = {isa = PBXBuildFile; fileRef = 3620E93C27D95D1B007A9935 /* meshObj.obj */; };
+		3620E94027D9603A007A9935 /* toy_robot_vintage.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3620E93F27D96039007A9935 /* toy_robot_vintage.usdz */; };
+		3620E94227D96657007A9935 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3620E94127D96657007A9935 /* Utility.swift */; };
 		363FA15927B6DD9C00783D9D /* CaseDetailWithNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FA15827B6DD9C00783D9D /* CaseDetailWithNote.swift */; };
 		363FA15B27B6F61A00783D9D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FA15A27B6F61A00783D9D /* FirebaseManager.swift */; };
 		363FA15D27B81ED600783D9D /* EditImgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FA15C27B81ED600783D9D /* EditImgInfo.swift */; };
@@ -65,6 +69,10 @@
 		360FDA7B27A71F3D00B5432A /* CreateCaseUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateCaseUI.swift; path = "Flash Chat iOS13/Controllers/CreateCaseUI.swift"; sourceTree = SOURCE_ROOT; };
 		361BD264273B331100EA0E69 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		361BD268273B33F200EA0E69 /* Button.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Button.xib; sourceTree = "<group>"; };
+		3620E93927D95907007A9935 /* ScanObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanObj.swift; sourceTree = "<group>"; };
+		3620E93C27D95D1B007A9935 /* meshObj.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = meshObj.obj; sourceTree = "<group>"; };
+		3620E93F27D96039007A9935 /* toy_robot_vintage.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot_vintage.usdz; sourceTree = "<group>"; };
+		3620E94127D96657007A9935 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		363FA15827B6DD9C00783D9D /* CaseDetailWithNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailWithNote.swift; sourceTree = "<group>"; };
 		363FA15A27B6F61A00783D9D /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		363FA15C27B81ED600783D9D /* EditImgInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImgInfo.swift; sourceTree = "<group>"; };
@@ -122,6 +130,7 @@
 		0B628175235DEE8100E35CAF /* Flash Chat iOS13 */ = {
 			isa = PBXGroup;
 			children = (
+				3620E93B27D95D0E007A9935 /* objects */,
 				360CBEA7271B91ED006D8677 /* Constants.swift */,
 				0B628176235DEE8100E35CAF /* AppDelegate.swift */,
 				0B628178235DEE8100E35CAF /* SceneDelegate.swift */,
@@ -186,6 +195,15 @@
 			path = modals;
 			sourceTree = "<group>";
 		};
+		3620E93B27D95D0E007A9935 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				3620E93F27D96039007A9935 /* toy_robot_vintage.usdz */,
+				3620E93C27D95D1B007A9935 /* meshObj.obj */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
 		3648939127C94568004259E8 /* CaseComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +211,7 @@
 				36E9D3AA27BEEE6500D9F18D /* SingleImage.swift */,
 				36E9D3B027BEFF2900D9F18D /* ScanningViewController.swift */,
 				360CE5B027CD626F00B53426 /* CaseScanItem.swift */,
+				3620E93927D95907007A9935 /* ScanObj.swift */,
 			);
 			path = CaseComponents;
 			sourceTree = "<group>";
@@ -214,6 +233,7 @@
 			children = (
 				363FA15A27B6F61A00783D9D /* FirebaseManager.swift */,
 				366DA15F272F393700349DE7 /* Extensions.swift */,
+				3620E94127D96657007A9935 /* Utility.swift */,
 			);
 			path = Methods;
 			sourceTree = "<group>";
@@ -296,8 +316,10 @@
 			files = (
 				0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */,
 				360CBEAE271B9699006D8677 /* MessageCell.xib in Resources */,
+				3620E94027D9603A007A9935 /* toy_robot_vintage.usdz in Resources */,
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
 				360CBEA6271B85B2006D8677 /* GoogleService-Info.plist in Resources */,
+				3620E93D27D95D1B007A9935 /* meshObj.obj in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
 				361BD269273B33F200EA0E69 /* Button.xib in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
@@ -368,10 +390,12 @@
 				3648939627C95027004259E8 /* AudioPlayer.swift in Sources */,
 				3648939827C960B3004259E8 /* CaseAudioRecording.swift in Sources */,
 				361BD265273B331100EA0E69 /* Button.swift in Sources */,
+				3620E93A27D95907007A9935 /* ScanObj.swift in Sources */,
 				364FB90027B0567800EA3459 /* ImagePIckerView.swift in Sources */,
 				36BC26F8278393FE0084001C /* CaseListItem.swift in Sources */,
 				360CBEA8271B91ED006D8677 /* Constants.swift in Sources */,
 				36E9D3AB27BEEE6500D9F18D /* SingleImage.swift in Sources */,
+				3620E94227D96657007A9935 /* Utility.swift in Sources */,
 				36E9D3B127BEFF2900D9F18D /* ScanningViewController.swift in Sources */,
 				363FA15927B6DD9C00783D9D /* CaseDetailWithNote.swift in Sources */,
 				36BC27022783B7FF0084001C /* CaseDetailsUI.swift in Sources */,

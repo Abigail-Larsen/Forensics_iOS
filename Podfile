@@ -13,5 +13,7 @@ target 'Flash Chat iOS13' do
 	pod 'Firebase/Firestore'
   pod 'Firebase/Storage'  
   pod 'IQKeyboardManagerSwift'
+  
+  pod 'Insert3D'
 
 end
