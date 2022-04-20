@@ -1,0 +1,13 @@
+{
+  "data" : [
+    {
+      "filename" : "toy_robot_vintage.usdz",
+      "idiom" : "universal",
+      "universal-type-identifier" : "com.pixar.universal-scene-description-mobile"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

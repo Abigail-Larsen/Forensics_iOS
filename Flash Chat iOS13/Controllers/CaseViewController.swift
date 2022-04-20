@@ -24,23 +24,15 @@ struct CaseViewController: View {
     
     @ObservedObject var caseGetter = CaseGetter()
     
-
-    
     init() {
         UISegmentedControl.appearance().selectedSegmentTintColor = .white
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.systemGray], for: .normal)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
     }
 
-
     var body: some View {
         VStack {
             HStack(alignment: .center) {
-//                Image(systemName: "person.crop.circle")
-//                    .resizable()
-//                    .frame(width: 30, height: 30)
-//                    .foregroundColor(Color(red: 0.79, green: 0.74, blue: 1.00))
-//                    .padding(.trailing, 10)
                 Text("Cases").foregroundColor(.white).font(.system(size: 36, weight: .bold))
                 Spacer()
                 Button(action:{

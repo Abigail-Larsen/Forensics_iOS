@@ -33,7 +33,6 @@ struct CaseDetailsUI: View {
     
     
     var body: some View {
-//        NavigationView{
                 VStack{
                     HStack {
                         Spacer()
@@ -43,9 +42,8 @@ struct CaseDetailsUI: View {
                     
                     ScrollView {
                         VStack{
-                            
                             ForEach(caseGetter.caseScans) { item in
-                                CaseScanItem(caseNumber: self.$caseNumber, date: .constant(item.date))
+                                CaseScanItem(caseNumber: self.$caseNumber, date: .constant(item.date), scanName: .constant(item.scanName))
                             }
 
                             ForEach(caseGetter.caseAudios) { item in

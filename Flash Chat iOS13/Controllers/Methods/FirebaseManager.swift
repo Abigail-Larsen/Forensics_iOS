@@ -28,6 +28,7 @@ struct CaseAudio: Identifiable, Hashable {
 struct CaseScan: Identifiable, Hashable {
     var id: UUID?
     var date: String
+    var scanName: String
 }
 
 
@@ -144,8 +145,29 @@ class CaseGetter: ObservableObject {
                     self.caseScans = documents.compactMap { queryDocumentSnapshot -> CaseScan? in
                         let data = queryDocumentSnapshot.data()
                         let date = data["scanDate"] as? String ?? ""
+                        let scanName = data["scanName"] as? String ?? ""
                         print("DATA", data)
-                       return CaseScan(id: .init(), date: date)
+                        return CaseScan(id: .init(), date: date, scanName: scanName)
+                    }
+                }
+            }
+        }
+    func fetchMesh(caseNumber: String) {
+        FirebaseManager.shared.firestore.collection("cases").document(caseNumber).collection("scans")
+            .addSnapshotListener { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    guard let documents = querySnapshot?.documents else {
+                      print("No documents")
+                      return
+                    }
+                    self.caseScans = documents.compactMap { queryDocumentSnapshot -> CaseScan? in
+                        let data = queryDocumentSnapshot.data()
+                        let date = data["scanDate"] as? String ?? ""
+                        let scanName = data["scanName"] as? String ?? ""
+                        print("DATA", data)
+                        return CaseScan(id: .init(), date: date, scanName: scanName)
                     }
                 }
             }
@@ -177,7 +199,6 @@ class CaseUpdater: ObservableObject {
                 storage.child("audio/" + caseNumber + "/" + filename).downloadURL { url, err in
                     guard let url = url, error == nil else { return }
                     let urlString = url.absoluteString
-                    print("URL STRING", urlString)
                     FirebaseManager.shared.firestore
                         .collection("cases")
                         .document(caseNumber)
@@ -190,11 +211,9 @@ class CaseUpdater: ObservableObject {
         })
     }
     func updateImgInfo(newTitle: String, newDescription: String, caseNumber: String, imgName: String) {
-        print("new Title", imgName, newTitle)
         let str = imgName.split(separator: "/").last!
         let foo = str.split(separator: "?").first!
         let bar = foo.split(separator: "F").last!
-        print("BAR CASE IMG", bar)
         db.collection("cases").document(caseNumber).collection("images").document(String(bar)).setData(["imgTitle": newTitle, "imgDescription": newDescription], merge: true)
     }
     func addScan(caseNumber: String) {

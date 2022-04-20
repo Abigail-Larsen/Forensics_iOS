@@ -11,10 +11,11 @@ import SwiftUI
 struct CaseScanItem: View {
     @Binding var caseNumber: String
     @Binding var date: String
+    @Binding var scanName: String
 
     var body: some View {
         NavigationLink(
-            destination: ScanObj()
+            destination: ScanObj(caseNumber: self.$caseNumber, caseName: .constant("\(String(scanName))"))
         )
         {
             
@@ -24,7 +25,7 @@ struct CaseScanItem: View {
                         Text("Scan:")
                             .foregroundColor(.black)
                             .font(.system(size: 20, weight: .bold))
-                        Text("Untitled Scan")
+                        Text("\(String(scanName))")
                             .foregroundColor(.black)
                             .font(.system(size: 16, weight: .light))
                             .padding(.leading, 20)
@@ -62,6 +63,6 @@ struct CaseScanItem: View {
 
 struct CaseScanItem_Previews: PreviewProvider {
     static var previews: some View {
-        CaseScanItem( caseNumber: .constant("2468"), date: .constant("LOL"))
+        CaseScanItem( caseNumber: .constant("2468"), date: .constant("LOL"), scanName: .constant("LOL"))
     }
 }

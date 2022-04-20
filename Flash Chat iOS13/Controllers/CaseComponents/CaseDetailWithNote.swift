@@ -23,9 +23,7 @@ struct CaseDetailWithNote: View {
                     
                     Button(action: {
                         isEditingText.toggle()
-                        
                     }, label:{
-                        
                         HStack{
                             Text(imgTitle)
                                 .foregroundColor(.white)
@@ -114,7 +112,7 @@ struct CaseDetailWithNote: View {
  
                     case .failure:
                         VStack {
-                            Image("caseImg")
+                            ProgressView()
                             Spacer()
                         }
                         .frame(width: 180, height: 180)

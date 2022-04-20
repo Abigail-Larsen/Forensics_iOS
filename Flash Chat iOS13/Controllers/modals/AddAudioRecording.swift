@@ -22,7 +22,8 @@ struct AudioRecordingView: View {
         VStack {
             
             VStack(alignment: .leading){
-                Text("New Voice Memo before recording").foregroundColor(.white).font(.system(size: 18, weight: .bold))
+                Text("New Voice Memo").foregroundColor(.white).font(.system(size: 18, weight: .bold))
+                Text("Please add title").foregroundColor(.white).font(.system(size: 12))
             }
             
             TextField("Voice Memo Title", text: $newTitle )
@@ -73,6 +74,7 @@ struct AudioRecordingView: View {
             }
         }
         .padding(50)
+        .background(.black)
     }
        
 }

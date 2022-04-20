@@ -25,6 +25,7 @@ struct SingleImage: View {
                     VStack {
                         ProgressView()
                             .padding(50)
+                            .frame(width: UIScreen.main.bounds.size.width)
                     }
                 case .success(let image):
                     VStack {
@@ -51,6 +52,7 @@ struct SingleImage: View {
             }
             Spacer()
         }
+        .background(.black)
     }
 }
 
