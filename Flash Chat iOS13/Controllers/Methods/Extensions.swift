@@ -27,15 +27,6 @@ extension Date
     }
 }
 
-
-
-
-
-
-
-
-
-
 extension simd_float4x4 {
     var position: SIMD3<Float> {
         return SIMD3<Float>(columns.3.x, columns.3.y, columns.3.z)
@@ -55,17 +46,7 @@ extension ARMeshGeometry {
         let vertex = vertexPointer.assumingMemoryBound(to: (Float, Float, Float).self).pointee
         return vertex
     }
-    
-    /// To get the mesh's classification, the sample app parses the classification's raw data and instantiates an
-    /// `ARMeshClassification` object. For efficiency, ARKit stores classifications in a Metal buffer in `ARMeshGeometry`.
-//    func classificationOf(faceWithIndex index: Int) -> ARMeshClassification {
-//        guard let classification = classification else { return .none }
-//        assert(classification.format == MTLVertexFormat.uchar, "Expected one unsigned char (one byte) per classification")
-//        let classificationPointer = classification.buffer.contents().advanced(by: classification.offset + (classification.stride * index))
-//        let classificationValue = Int(classificationPointer.assumingMemoryBound(to: CUnsignedChar.self).pointee)
-//        return ARMeshClassification(rawValue: classificationValue) ?? .none
-//    }
-    
+
     func vertexIndicesOf(faceWithIndex faceIndex: Int) -> [UInt32] {
         assert(faces.bytesPerIndex == MemoryLayout<UInt32>.size, "Expected one UInt32 (four bytes) per vertex index")
         let vertexCountPerFace = faces.indexCountPerPrimitive
